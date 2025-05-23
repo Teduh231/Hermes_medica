@@ -1,0 +1,62 @@
+.header{
+    background-color: #336DCC;
+    width: 100%;
+    height: 4rem;
+    top: 0;
+    position: fixed;
+    display: flex;
+    z-index: 20;
+    align-items: center;
+    position: relative;
+}
+.icon{
+    width: 4rem;
+        margin-left: 11px;
+    align-self: center;
+}
+.container{
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding-top: 9%;
+    display: flex;
+}
+.login{
+width: 405px;
+height: 525px;
+border: 1px collapse;
+border-radius: 10px;
+border-style: groove;
+top: 0;
+}
+body{
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0;
+}
+.sidebar{
+    position: fixed;
+    height: calc(100vh - 4rem);
+    width: 14rem;
+    background-color: #444;
+    z-index: 15;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+.profile{
+    margin-top: 15px;
+    z-index: 10;
+    width: 14rem;
+    height: 3rem;
+    background-color: #333333;
+    display: flex;
+    align-items: center;  
+}
+.p_icon{    
+    margin-left: 10px;
+}
+.p_name{
+    margin-left: 10px;
+}
+
+
