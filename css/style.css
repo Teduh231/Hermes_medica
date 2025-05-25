@@ -43,40 +43,6 @@ body {
     align-items: center;
 }
 
-/* Navbar */
-.navbar {
-    position: relative;
-    top: 4rem;
-    height: 3rem;
-    width: 100%;
-    background-color: var(--gray-dark);
-    z-index: 10;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.navbar-links {
-    display: flex;
-    gap: 1rem;
-}
-
-.navbar-links a {
-    text-decoration: none;
-    font-size: 25px;
-    color: var(--text-white);
-    padding: 5px 10px;
-    border-radius: 10px;
-    transition: background-color 0.3s ease;
-}
-
-.navbar-links a:hover {
-    background-color: #4b4949;
-}
-
-.navbar-links a:active {
-    background-color: #5e5a5a;
-}
 
 /* Login Box */
 .login {
