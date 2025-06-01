@@ -1,8 +1,9 @@
 <?php
 session_start();
-
+include 'header.php';
+include 'navbar.php';
 // Check if the user is an admin
-if (!isset($_SESSION['is_admin']) || $_SESSION['is_admin'] !== true) {
+if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
     header("Location: login.php"); // Redirect if not an admin
     exit();
 }
@@ -21,7 +22,7 @@ if ($conn->connect_error) {
 if (isset($_POST['add_doctor'])) {
     // Get doctor data from the form
     $new_user_id = $_POST['new_Id_user'];
-    $new_password = $_POST['new_Password'];
+    $new_password = password_hash($_POST['new_Password'], PASSWORD_DEFAULT); // Hash the password
     $new_nama_dokter = $_POST['new_nama_dokter'];
     $new_spesialis = $_POST['new_Spesialis'];
     // Handle file upload for Foto_dokter (this is a simplified example)
@@ -30,7 +31,7 @@ if (isset($_POST['add_doctor'])) {
     // Prepare and execute the SQL query to insert the new doctor
     $sql_insert = "INSERT INTO user_doctor (Id_user, Password, nama_dokter, Spesialis, Foto_dokter) VALUES (?, ?, ?, ?, ?)";
     $stmt_insert = $conn->prepare($sql_insert);
-    $stmt_insert->bind_param("ssssb", $new_user_id, $new_password, $new_nama_dokter, $new_spesialis, $new_foto_dokter);
+    $stmt_insert->bind_param("sssss", $new_user_id, $new_password, $new_nama_dokter, $new_spesialis, $new_foto_dokter);
 
     if ($stmt_insert->execute()) {
         echo "<p style='color: green;'>New doctor added successfully!</p>";
@@ -46,9 +47,11 @@ $conn->close();
 
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Admin Console</title>
 </head>
+
 <body>
     <h1>Admin Console</h1>
     <p><a href="logout.php">Logout</a></p>
@@ -78,4 +81,5 @@ $conn->close();
         <button type="submit" name="add_doctor">Add Doctor</button>
     </form>
 </body>
+
 </html>
