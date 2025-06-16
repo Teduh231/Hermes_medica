@@ -19,10 +19,10 @@ if (!isset($_SESSION['id_user'])) {
 
 <body>
     <div class="pasien-nav-container">
-        <a href="data-rekap.php" class="pasien-card">
+        <a href="data-obat.php" class="pasien-card">
             <div>
                 <div class="pasien-card-title">DATA</div>
-                <div class="pasien-card-sub">Rekap Medis</div>
+                <div class="pasien-card-sub">OBAT</div>
             </div>
             <div class="pasien-card-icon">
                 <svg width="60" height="48" viewBox="0 0 60 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -33,10 +33,10 @@ if (!isset($_SESSION['id_user'])) {
                 </svg>
             </div>
         </a>
-        <a href="input-rekap.php" class="pasien-card">
+        <a href="input-obat.php" class="pasien-card">
             <div>
                 <div class="pasien-card-title">INPUT</div>
-                <div class="pasien-card-sub">Rekap Medis</div>
+                <div class="pasien-card-sub">OBAT</div>
             </div>
             <div class="pasien-card-icon">
                 <svg width="60" height="48" viewBox="0 0 60 48" fill="none" xmlns="http://www.w3.org/2000/svg">

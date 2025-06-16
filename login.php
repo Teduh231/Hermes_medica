@@ -62,7 +62,7 @@ if ($result->num_rows === 1) {
         $_SESSION['spesialis'] = $row['Spesialis'];
         $_SESSION['Foto_dokter'] = base64_encode($row['Foto_dokter']);
 
-        header("Location: dashboard.php");
+        header("Location: index.php");
         exit();
     }
 }

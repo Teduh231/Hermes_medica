@@ -42,7 +42,7 @@
           </div>
         </div>
       </div>
-    <?php elseif ($_SESSION['role'] === 'admin'): ?>
+    <?php elseif ($_SESSION['role'] === 'Admin'): ?>
       <!-- Logout Button for Admin -->
       <div class="admin-logout" style="margin-left: auto; margin-right: 20px;">
         <a href="logout.php" style="color: white; font-size: 18px; text-decoration: none; background-color: #007bff; padding: 10px 20px; border-radius: 5px;">Log out</a>
